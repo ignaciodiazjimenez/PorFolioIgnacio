@@ -1,7 +1,7 @@
 ---                               
- import './src/styles/global.css'  
- import Header from '../components/Header.jsx'
-import Footer from '../components/Footer.jsx'
+	import './src/styles/global.css'  
+	import Header from '../components/Header.jsx'
+	import Footer from '../components/Footer.jsx'
 ---   
 
 <!doctype html>
@@ -11,11 +11,42 @@ import Footer from '../components/Footer.jsx'
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Ignacio de Loyola Díaz🤝</title>
 	</head>
-	<body>
+	<script src="https://kit.fontawesome.com/8f1d349513.js" crossorigin="anonymous"></script>
+	<body class="bg-[#0b4650] text-[#e6ff2b]">
 		<Header/>
-		<h2 class=" text-red-500 font-bold text-4xl">Hola mundo</h2>
+		<div class="relative flex justify-end p-4">
+			<!-- Icono de menú -->
+			<button id="menuButton" class="text-5xl text-[#e6ff2b] focus:outline-none">
+				<i class="fa-solid fa-ellipsis-vertical"></i>
+			</button>
+	
+			<!-- Menú desplegable -->
+			<div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg">
+				<a href="/index" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Inicio</a>
+				<a href="/contacto" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Contacto</a>
+			</div>
+		</div>
+	
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const menuButton = document.getElementById('menuButton');
+				const dropdownMenu = document.getElementById('dropdownMenu');
+	
+				if (menuButton && dropdownMenu) {
+					menuButton.addEventListener('click', () => {
+						dropdownMenu.classList.toggle('hidden');
+					});
+	
+					document.addEventListener('click', (event) => {
+						if (!menuButton.contains(event.target as Node) && !dropdownMenu.contains(event.target as Node)) {
+							dropdownMenu.classList.add('hidden');
+						}
+					});
+				}
+			});
+		</script>
 		<slot />
 		<Footer/>
 	</body>
