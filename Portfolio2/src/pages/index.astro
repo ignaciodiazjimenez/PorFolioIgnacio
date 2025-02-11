@@ -1,15 +1,156 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-
 ---
 
 <Layout>
-  <div class="flex items-center justify-center gap-2 mt-0 h-[calc(100vh-4rem)]">
-    <img class="w-45 h-auto rounded-lg" src="/PerfilAula.jpg" alt="Foto de Ignacio de Loyola Díaz" />
-    <h1 class="text-4xl font-bold text-[#e6ff2b]">Ignacio de Loyola Díaz Jiménez</h1>
-  </div>
-</Layout>
+<!-- Sección Principal -->
+<main class="p-8 space-y-16">
+  
+  <!-- Foto de Perfil y Slider de Proyectos -->
+  <section class="flex flex-col md:flex-row items-center gap-8" id="proyectos">
+    
+    <!-- Foto de Perfil (Ajustada para que no esté aplastada) -->
+    <img class="w-48 h-48 object-cover rounded-full border-4 border-[#e6ff2b]" src="public/PerfilAula.jpg" alt="Foto de Ignacio de Loyola Díaz" />
 
+    
+    <!-- Contenedor de Proyectos con Slider -->
+    <div class="flex-1 bg-[#00333a] p-6 rounded-lg shadow-md w-full">
+      <h2 class="text-2xl font-bold text-[#e6ff2b] mb-4">Proyectos</h2>
+      
+      <!-- Slider de Proyectos -->
+      <div class="flex space-x-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory p-2">
+        
+        <!-- Proyecto 1 -->
+        <div class="flex-shrink-0 w-60 h-32 bg-[#00444f] text-center text-white rounded-md shadow-md flex items-center justify-center snap-center">
+          Mod de Minecraft
+        </div>
+        
+        <!-- Proyecto 2 -->
+        <div class="flex-shrink-0 w-60 h-32 bg-[#00444f] text-center text-white rounded-md shadow-md flex items-center justify-center snap-center">
+          Página Web MeepleUP
+        </div>
+        
+        <!-- Proyecto 3 (Texto Largo Ajustado) -->
+        <div class="flex-shrink-0 w-60 h-32 bg-[#00444f] text-center text-white rounded-md shadow-md flex items-center justify-center snap-center break-words">
+          Gestión de Proyectos del Aula de Software Libre de la FP de Córdoba
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+<!-- Trayectoria -->
+<section id="trayectoria" class="bg-[#00333a] p-8 rounded-lg shadow-md">
+  <h2 class="text-3xl font-bold text-[#e6ff2b] mb-8 text-center">Trayectoria</h2>
+  
+  <div class="relative border-l-4 border-[#e6ff2b] ml-4">
+    
+    <!-- Item 1 -->
+    <div class="mb-8 ml-6">
+      <div class="absolute w-4 h-4 bg-[#e6ff2b] rounded-full -left-2 top-2"></div>
+      <div class="bg-[#00444f] p-4 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-[#e6ff2b]">Aula de Software Libre de la FP de Córdoba</h3>
+        <a href="https://www.linkedin.com/company/aula-de-software-libre" class="text-blue-300 hover:underline text-sm">
+          www.linkedin.com/company/aula-de-software-libre
+        </a>
+        <p class="text-white mt-2">Fundador y Administrador Delegado</p>
+        <p class="text-gray-400 text-sm">Abr 2024 — Ahora</p>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="mb-8 ml-6">
+      <div class="absolute w-4 h-4 bg-[#e6ff2b] rounded-full -left-2 top-2"></div>
+      <div class="bg-[#00444f] p-4 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-[#e6ff2b]">CES Lope de Vega</h3>
+        <a href="https://www.linkedin.com/company/ces-lope-de-vega" class="text-blue-300 hover:underline text-sm">
+          www.linkedin.com/company/ces-lope-de-vega
+        </a>
+        <p class="text-white mt-2">Grado Superior en Desarrollo de Aplicaciones Multiplataforma</p>
+        <p class="text-white mt-2">Delegado en DAM 2023/2025</p>
+        <p class="text-gray-400 text-sm">Sept 2023 — Ahora</p>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="mb-8 ml-6">
+      <div class="absolute w-4 h-4 bg-[#e6ff2b] rounded-full -left-2 top-2"></div>
+      <div class="bg-[#00444f] p-4 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-[#e6ff2b]">Instituto Salvador de Córdoba</h3>
+        <a href="https://www.instituto-salvadordecordoba.es/centro" class="text-blue-300 hover:underline text-sm">
+          www.instituto-salvadordecordoba.es/centro
+        </a>
+        <p class="text-white mt-2">Grado Superior de Anatomía Patológica y Citogenética</p>
+        <p class="text-gray-400 text-sm">Oct 2020 — Jun 2021</p>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="mb-8 ml-6">
+      <div class="absolute w-4 h-4 bg-[#e6ff2b] rounded-full -left-2 top-2"></div>
+      <div class="bg-[#00444f] p-4 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-[#e6ff2b]">Centro de Estudios Internacionales Tartessos</h3>
+        <a href="https://tartessosinternacional.com/tartessos" class="text-blue-300 hover:underline text-sm">
+          tartessosinternacional.com/tartessos
+        </a>
+        <p class="text-white mt-2">Grado Superior de Laboratorio Clínico y Biomédico</p>
+        <p class="text-white mt-2">SubDelegado en LCB 2018/2020</p>
+        <p class="text-gray-400 text-sm">Oct 2018 — Jun 2020</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Sobre Mí con Foto Sentado -->
+<section id="sobre-mi" class="flex flex-col md:flex-row items-center gap-8 p-8">
+  <img class="w-40 h-auto rounded-lg shadow-md" src="/FotoSentadoSolo.jpg" alt="Foto sentado de Ignacio de Loyola Díaz" />
+  
+  <div class="flex-1 bg-[#00333a] p-6 rounded-lg shadow-md text-white">
+    <h2 class="text-3xl font-bold text-[#e6ff2b] mb-4">Sobre Mí</h2>
+    
+    <p class="leading-relaxed mb-4">
+      Soy un apasionado del <span class="text-[#e6ff2b] font-semibold">desarrollo de software</span> y la <span class="text-[#e6ff2b] font-semibold">gestión de proyectos</span>. 
+    </p>
+    
+    <p class="leading-relaxed mb-4">
+      Actualmente, estoy cursando <span class="text-[#e6ff2b] font-semibold">Desarrollo de Aplicaciones Multiplataforma</span> en el Lope de Vega de Córdoba, 
+      donde perfecciono mis habilidades técnicas y creativas. Además, lidero el <span class="text-[#e6ff2b] font-semibold">Aula de Software Libre de la FP de Córdoba</span>, 
+      una iniciativa que nace del entusiasmo de los alumnos por mejorar profesional y personalmente. 🤝🏻
+    </p>
+    
+    <p class="leading-relaxed mb-4">
+      Tengo <span class="text-[#e6ff2b] font-semibold">formación en Laboratorio Clínico-Biomédico</span>, 
+      <span class="text-[#e6ff2b] font-semibold">Anatomía Patológica</span> y <span class="text-[#e6ff2b] font-semibold">Citogenética</span>. 
+      Esta formación me ha permitido aportar una <span class="text-[#e6ff2b] font-semibold">visión analítica y crítica</span> en la 
+      <span class="text-[#e6ff2b] font-semibold">gestión de proyectos</span>, optimizando procesos y asegurando un enfoque 
+      detallado y eficiente en el desarrollo de software. 🧐
+    </p>    
+    
+    <p class="leading-relaxed">
+      Mi objetivo es convertirme en un <span class="text-[#e6ff2b] font-semibold">desarrollador</span> que aporta soluciones sólidas y lidera equipos de forma ágil, 
+      optimizando procesos y asegurando la entrega exitosa de proyectos. 💪🏼
+    </p>
+  </div>
+</section>
+
+
+    <!-- Stack Tecnológico -->
+    <section id="stack-tech" class="bg-[#00333a] p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-bold text-[#e6ff2b] mb-4">Stack Tecnológico</h2>
+      <ul class="flex gap-4 flex-wrap text-white">
+        <li class="bg-[#00444f] px-4 py-2 rounded-md shadow">JavaScript</li>
+        <li class="bg-[#00444f] px-4 py-2 rounded-md shadow">React</li>
+        <li class="bg-[#00444f] px-4 py-2 rounded-md shadow">Node.js</li>
+        <li class="bg-[#00444f] px-4 py-2 rounded-md shadow">Astro</li>
+        <li class="bg-[#00444f] px-4 py-2 rounded-md shadow">TailwindCSS</li>
+        <li class="bg-[#00444f] px-4 py-2 rounded-md shadow">Java</li>
+        <li class="bg-[#00444f] px-4 py-2 rounded-md shadow">C#</li>
+      </ul>
+    </section>
+  </main>
+</Layout>

@@ -15,19 +15,22 @@
 	</head>
 	<script src="https://kit.fontawesome.com/8f1d349513.js" crossorigin="anonymous"></script>
 	<body class="bg-[#00444f] text-[#e6ff2b]">
+
 		<Header/>
+
 		<div class="relative flex justify-end p-4">
 			<!-- Icono de menú -->
-			<button id="menuButton" class="text-5xl text-[#e6ff2b] focus:outline-none">
+			<button id="menuButton" class="relative text-5xl text-[#e6ff2b] focus:outline-none">
 				<i class="fa-solid fa-ellipsis-vertical">ILDJ</i>
 			</button>
-	
+		
 			<!-- Menú desplegable -->
-			<div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-48 bg-[#00444f] rounded-md shadow-lg">
+			<div id="dropdownMenu" class="hidden absolute right-0 top-full mt-2 w-48 bg-[#00444f] rounded-md shadow-lg">
 				<a href="/" class="block px-4 py-2 text-[#e6ff2b] hover:bg-[#00444f]">Inicio</a>
 				<a href="/contacto" class="block px-4 py-2 text-[#e6ff2b] hover:bg-[#00444f]">Contacto</a>
 			</div>
 		</div>
+		
 	
 		<script>
 			document.addEventListener('DOMContentLoaded', () => {
@@ -48,7 +51,9 @@
 			});
 		</script>
 		<slot />
+
 		<Footer/>
+		
 	</body>
 </html>
 
